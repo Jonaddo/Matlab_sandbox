@@ -1,4 +1,4 @@
-# Matlab_sandbox
+# About this repository
 Divers projects related to finance.
 
 In order to detect an opportunity, the product of the three currencies pairs should exceed 1.
