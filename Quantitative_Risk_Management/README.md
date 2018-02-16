@@ -2,7 +2,7 @@
 This was an option project in the class Financial Econometrics. This project shows how to compute different types of Value at Risk and also the portfolio sensitivity to its different components.
 
 # Portfolio composition
-The portfolio is constructed with only three stocks (Banca Monte dei Paschi di Siena, Deutsche Bank and Credit Suisse) and is eqully weighted, i.e. w = 1/3 for every stocks.
+The portfolio is constructed with only three stocks (Banca Monte dei Paschi di Siena, Deutsche Bank and Credit Suisse) and is equally weighted, i.e. w = 1/3 for every stocks.
 
 ![portf](https://user-images.githubusercontent.com/36447056/36306875-ea573cca-1319-11e8-805f-562a54143607.jpg)
 
