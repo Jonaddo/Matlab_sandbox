@@ -5,7 +5,7 @@ We collected high frequency data for three pairs of currencies in order to be ab
 - USD/JPY
 - JPY/GBP
 
-In the csv file you will find bid-ask prices over a period of 10 hours. We already have preprocess the data in order to have seconds by seconds instead of ticks data points.
+In the currencies.mat file you will find bid-ask prices over a period of 10 hours. We already have preprocess the data in order to have seconds by seconds instead of ticks data points.
 
 In order to detect an opportunity, the product of the three currencies should exceed 1.
 As we could expect there are no arbitrage opportunities since we are standing in a very liquid and "efficient" market.
