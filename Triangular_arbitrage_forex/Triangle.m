@@ -1,21 +1,20 @@
 %% Triangular Arbitrage
-%Période: Mardi 9 Novembre de 07:00 à 17:00 
+% Period: Tuesday 9th November 2016, 07:00 am to 05:00 pm 
 clc
-%% Debut des calculs
-%Pour obtenir un Bid price JPYGBP à partir d'un Bid GBPJPY
-%il faut prendre le ASK GBPJP puis l'inversé
+%% Bid price
+% In order to get the Bid price JPYGBP from the Bid GBPJPY we need to
+% inverse the ASK GBPJPY
 
-JPYGBP=zeros(36001,1);% changement de point de vue pour avoir du JPYGBP
+JPYGBP=zeros(36001,1);
 for i=1:36001
     JPYGBP(i,1)=1/(forex(i,3));
 end
 
-forex=[forex(:,1) forex(:,2) JPYGBP];%Matrix des 3 FOREX
-Ia=1000000;%Initial amount in GBP
-
+forex=[forex(:,1) forex(:,2) JPYGBP];
+Ia=1000000;                           
 l=length(forex);
 %%
-Arbitrage_p=zeros(l,1);%Arbitrage "Profit"
+Arbitrage_p=zeros(l,1);              
 for i=1:l
     Arbitrage_p(i,1)=Ia*forex(i,1)*forex(i,2)*forex(i,3);
 end
@@ -26,9 +25,7 @@ for i=1:l
 end
         
 Ia_1=Ia*ones(l,1);
-Difference=Arbitrage_p-Ia_1;%Payoff positif and/or negatif
-
-%Positives payoffs
+Difference=Arbitrage_p-Ia_1; 
 %%
 D=size(Difference);
 Profit_minute=zeros(D);
@@ -39,8 +36,7 @@ for i=1:D(1,1)
         Profit_minute(i,1)=0;
     end
 end
-%% Descriptive statistics
-%Cumulative Profit Plot
+%% Figure 1: Cash flows
 Cumu=zeros(l,1);
 for i=2:l
     Cumu(i,1)=Cumu(i-1,1)+Profit_minute(i,1);
@@ -48,42 +44,37 @@ end
 
 Final_amount=Ia+Cumu(l,1);
 
-%Graph 
 figure
-subplot(2,1,1)       % add first plot in 2 x 1 grid
+subplot(2,1,1)      
 plot(Profit_minute)
 title('Cash flows during a stock-day')
 ylabel('Cash flow')
 xlabel('Secondes')
 
-subplot(2,1,2)       % add second plot in 2 x 1 grid
-area(Cumu)       % plot using + markers
+subplot(2,1,2)       
+area(Cumu)       
 title('Cumulative cash flows')
 ylabel('Cash flow')
 xlabel('Secondes')
-
-%Graph
+%% Figure 2: Triangle
 figure
-subplot(4,1,1)       % add first plot in 4 x 1 grid
+subplot(4,1,1)      
 plot(forex(:,1))
 title('GBP/USD')
 ylabel('Bid rate(t)')
 
-
-subplot(4,1,2)       % add second plot in 2 x 1 grid
-plot(forex(:,2))       % plot using + markers
+subplot(4,1,2)       
+plot(forex(:,2))       
 title('USD/JPY')
 ylabel('Bid rate(t)')
 
-
-subplot(4,1,3)       % add second plot in 2 x 1 grid
-plot(forex(:,3))       % plot using + markers
+subplot(4,1,3)       
+plot(forex(:,3))       
 title('JPY/GBP')
 ylabel('Bid rate(t)')
 
-
-subplot(4,1,4)       % add second plot in 2 x 1 grid
-plot(Product_forex)       % plot using + markers
+subplot(4,1,4)      
+plot(Product_forex)       
 title('R')
 ylabel('R(t)')
 xlabel('Time in seconds')
