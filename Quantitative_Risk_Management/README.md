@@ -11,4 +11,4 @@ In the project file we compute different risk measures such as: parametric and n
 As we expected the Gaussian VaR underestimate the true VaR therefore it is not recommended to use the parametric VaR.
 In addition, the results also confirm that the ES tends to be higher than VaR since it takes into account the magnitude of the losses in the tail.
 
-![var_p](https://user-images.githubusercontent.com/36447056/36306871-e83c2d1a-1319-11e8-9219-aba818e2c171.jpg)
+![var](https://user-images.githubusercontent.com/36447056/36325904-7dd66f5e-1359-11e8-8d18-67114bf00b8e.jpg)
