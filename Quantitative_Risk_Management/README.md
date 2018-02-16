@@ -1,5 +1,5 @@
 # About this folder
-This was an option project in the class Financial Econometrics. This project shows how to compute different types of Value at Risk and also the portfolio sensitivity to its different components.
+This was an option project in the class Financial Econometrics. This project shows how to compute different types of Value at Risk, Expected Shortfall and also the portfolio's risk measure sensitivity to its different components.
 
 # Portfolio composition
 The portfolio is constructed with only three stocks (Banca Monte dei Paschi di Siena, Deutsche Bank and Credit Suisse) and is equally weighted, i.e. w = 1/3 for every stocks.
