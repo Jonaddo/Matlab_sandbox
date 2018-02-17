@@ -29,7 +29,7 @@ fprintf('------- Non parametric ES -------\n')
 NonParamES = mean(z.*normcdf((z-NonParamVaR)/h))/alpha
 %% VaR - Sensitivities 
 % Gaussian
-fprintf('------- Parametric sensitivities -------\n')
+fprintf('------- Parametric VaR sensitivities -------\n')
 SensitivitiesGaussianVaR = -mu + SIGMA * a/(a'*SIGMA*a)^(1/2)*z_95 
 % Using Kernel estimation
 T = length(z);
@@ -37,7 +37,7 @@ h = std(z)*T^(-.2);
 C = exp(-.5*((-stockReturn*a-NonParamVaR)/h).^2);
 A = kron(ones(1,1),C);
 B = -stockReturn.*A;
-fprintf('------- vaR - non param. sensitivities -------\n')
+fprintf('------- Non param. VaR sensitivities -------\n')
 SensitivitiesNonParamVaR = sum(B)'/sum(C)
 %% Extreme Value Theory w/ Peaks Over Threshold (POT)
 u=-.05;        %treshold
