@@ -9,8 +9,7 @@ The portfolio is constructed with only three stocks (Banca Monte dei Paschi di S
 # Value at risk (VaR) and Expected Shortfall (ES)
 In the project file we compute different risk measures such as: parametric and non parametric VaR, ES sensitivities and also peaks over treshold VaR and ES.
 As we expected the Gaussian VaR underestimate the true VaR therefore it is not recommended to use the parametric VaR.
-In addition, the results also confirm that the ES tends to be higher than VaR since it takes into account the magnitude of the losses in the tail.
+In addition, the results also confirm that the ES tends to be higher than VaR since it takes into account the magnitude of the losses in the tail (alpha = .05 for this example).
 
 ![ook](https://user-images.githubusercontent.com/36447056/36326257-b7bc541c-135a-11e8-8061-bbb0bbc6da4f.jpg)
-
 
