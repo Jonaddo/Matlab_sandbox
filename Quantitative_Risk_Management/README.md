@@ -1,5 +1,7 @@
 # About this folder
-This was an optional project in the class Financial Econometrics. This project applies different types of Value at Risk, Expected Shortfall and also portfolio's sensitivities to real data. 
+This was an optional project in the class Financial Econometrics. This project applies different risk measures to real data.
+
+I briefly describe some of the results.
 
 # Portfolio composition
 The portfolio is constructed with only three stocks (Banca Monte dei Paschi di Siena, Deutsche Bank and Credit Suisse) and is equally weighted.
@@ -14,9 +16,9 @@ In addition, the results also confirm that the ES tends to be higher than VaR si
 
 ![ook](https://user-images.githubusercontent.com/36447056/36326257-b7bc541c-135a-11e8-8061-bbb0bbc6da4f.jpg)
 
-Note for better accuracy it is better to use a Monte Carlo method.
+Note in order to forecast the VaR at a e.g. 10 days horizon the filtered historical simulation proposed by G. Barone-Adesi et al. (1998) may be more suitable. Indeed, their technique accounts for the conditional heteroscedasticity and non-normality of securitys' returns
 
 # Value at risk sensitivities
-As expected by some risk metrics and the news at that time, the italian bank Banca Monte dei Paschi di Siena contributes the most to the overall VaR of the portfolio.
+As expected the portfolio is mostly sensitive to the italian bank Banca Monte dei Paschi di Siena.
 
 ![var_sensi](https://user-images.githubusercontent.com/36447056/36421807-301fb6ba-163a-11e8-90f1-a8091661edbb.jpg)
